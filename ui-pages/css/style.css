@@ -35,7 +35,7 @@ header{
     padding-top: 5px;
     padding-bottom: 5px;
     background: #5a6c77;
-    color: rgba(255, 255, 255, 1);
+    color: #fff;
     min-height: 45px;
     border-bottom: 4px solid rgba(255, 126 , 0, 1);
     overflow: hidden;
@@ -91,13 +91,13 @@ header a:hover{
     left: 0;
     right: 0;
     z-index: 0;
-    min-height: 500px;
+    min-height: 440px;
     background-image: linear-gradient(to top right,
                                       rgb(0, 0, 0),
                                       rgba(0, 0, 25, 0.8),
                                       rgba(255, 90, 0, .6)), url("./../img/showcase.jpg");
     background-repeat:  no-repeat;
-    background-size: cover;
+    background-size: contain bottom;
     background-attachment: local, fixed;
     text-align: center;
     color: white;
@@ -132,8 +132,7 @@ header a:hover{
 }
 
 #showcase .btn-start:hover{
-    background: rgb(255, 126, 0);
-    color: black;
+    background: #ff6000;
 }
 
 /***************************************************************************************/
@@ -142,7 +141,7 @@ header a:hover{
     position: absolute;
     left: 0;
     right: 0;
-    top: 580px;
+    top: 500px;
     margin-bottom: 50px;
 }
 
@@ -164,8 +163,8 @@ header a:hover{
 
 #about-us .panel img{
     width: 170px;
-    height: 160px;
-    border-radius: 300px;
+    height: 150px;
+    border-radius: 80px;
     margin: auto;
     background: rgba(15, 158, 158, .2);
 }
@@ -174,11 +173,11 @@ header a:hover{
 /*footer*/
 footer{
     position: absolute;
-    top: 780px;
+    top: 680px;
     margin-top: 270px;
     left: 0;
     right: 0;
-    background: #e9e9e9;
+    background: #c0c0c0;
     text-align: center;
     font-weight: bold;
 }
