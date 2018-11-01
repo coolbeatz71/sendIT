@@ -136,3 +136,33 @@ header a:hover{
     background: rgb(255, 126, 0);
     color: black;
 }
+
+/***************************************************************************************/
+/*about us*/
+#about-us{
+    position: absolute;
+    top: 450px;
+    margin-top: 120px;
+}
+
+#about-us .container{
+    width: 90%;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+#about-us .panel{
+    float: left;
+    width: 25%;
+    padding: 20px;
+    text-align: center;
+    margin: 8px;
+    border: 1px solid black;
+}
+
+#about-us .panel img{
+    width: 200px;
+    height: 160px;
+    border-radius: 2px;
+    margin: auto;
+}
