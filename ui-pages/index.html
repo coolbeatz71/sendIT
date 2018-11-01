@@ -55,11 +55,29 @@
             </div>
         </div>
     </section>
-    <!-- modal page containing the sign-up forms -->
-    <div id="modalSignUp" class="modal">
-        <div class="modalContent">
-            <span class="modalCloseBtn">&times;</span>
-            <p>hello from the modal</p>
+    <!-- modal page containing the sign-up forms (registration) -->
+    <div id="modal-sign-up" class="modal">
+        <div class="modal-content">
+            <span class="btn-close-modal">&times;</span>
+            <h2>User Sign-Up</h2>
+            <div class="form-container">
+                <form id="sign-up-form">
+                    <!-- firstName input -->
+                    <label>First name</label>
+                    <input type="text" id="firstName" name="firstName">
+                    <!-- lastName input  -->
+                    <label>Last name</label>
+                    <input type="text" id="lastName" name="lastName">
+                    <!-- email input -->
+                    <label>Email</label>
+                    <input type="email" id="email" name="email">
+                    <!-- password input -->
+                    <label>Password</label>
+                    <input type="password" id="password" name="password">
+                    <!-- button submit  -->
+                    <button class="btn-submit" name="submit">Sign-Up</button>
+                </form>
+            </div>
         </div>
     </div>
     <footer>
