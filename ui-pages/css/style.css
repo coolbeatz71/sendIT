@@ -22,7 +22,7 @@ ul{
 /***************************************************************************************/
 /*modal for the signUp and signIn pages*/
 .modal{
-    display: block;
+    display: none;
     position: fixed;
     z-index: 3;
     left: 0;
