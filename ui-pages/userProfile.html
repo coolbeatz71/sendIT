@@ -31,10 +31,282 @@
             <li><a>Canceled</a></li>
         </ul>
     </aside>
-
-    <footer>
-        <p>SendIT by Mutombo Jean-Vincent copyright &copy; 2018</p>
-    </footer>
-    <script src="build/app.js"></script>
+    <section class="main">
+        <div class="container">
+            <button id="btn-create">New Parcel</button>
+            <h2>All my parcels</h2>
+            <hr>
+            <div class="table-area">
+                <!-- all parcels -->
+                <div id="all-parcels">
+                    <table>
+                        <tr>
+                            <th id="id-parcel">Id n°</th>
+                            <th>Name</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Status</th>
+                            <th id="action-parcel">Action</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>
+                                <div class="btn-group-action">
+                                    <button id="btn-details">details</button>
+                                    <button id="btn-edit">edit</button>
+                                    <button id="btn-cancel">cancel</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- parcels in transit -->
+                <div id="transit-parcels">
+                    <table>
+                        <tr>
+                            <th id="id-parcel">Id n°</th>
+                            <th>Name</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Status</th>
+                            <th id="action-parcel">Action</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>
+                                <div class="btn-group-action">
+                                    <button id="btn-details">details</button>
+                                    <button id="btn-edit">edit</button>
+                                    <button id="btn-cancel">cancel</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- delivered parcels -->
+                <div id="delivered-parcels">
+                    <table>
+                        <tr>
+                            <th id="id-parcel">Id n°</th>
+                            <th>Name</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Status</th>
+                            <th id="action-parcel">Action</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>
+                                <div class="btn-group-action">
+                                    <button id="btn-details">details</button>
+                                    <button id="btn-edit">edit</button>
+                                    <button id="btn-cancel">cancel</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- cancelled parcels -->
+                <div id="cancelled-parcels">
+                    <table>
+                        <tr>
+                            <th id="id-parcel">Id n°</th>
+                            <th>Name</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Status</th>
+                            <th id="action-parcel">Action</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>
+                                <div class="btn-group-action">
+                                    <button id="btn-details">details</button>
+                                    <button id="btn-edit">edit</button>
+                                    <button id="btn-cancel">cancel</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
