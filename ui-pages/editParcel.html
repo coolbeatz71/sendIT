@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
-    <title>SendIT - Welcome page</title>
+    <title>SendIT - Edit parcel</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,15 +17,62 @@
             <!-- here the nav containing links-->
             <nav>
                 <ul>
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a id="sign-in-link">Sign-In</a></li>
+                    <li><a>Logout</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <footer>
-        <p>SendIT by Mutombo Jean-Vincent copyright &copy; 2018</p>
-    </footer>
-    <script src="build/app.js"></script>
+    <!-- sidenav bar  -->
+    <aside class="sidenav" id="sidebar">
+        <ul>
+            <li id="link-all-parcels"><a>All parcels</a></li>
+            <li id="link-transit-parcels"><a>In transit</a></li>
+            <li id="link-delivered-parcels"><a>Delivered</a></li>
+            <li id="link-cancelled-parcels"><a>Canceled</a></li>
+        </ul>
+    </aside>
+    <!-- section for tables -->
+    <section class="main">
+        <div class="container" id="all-parcels">
+            <button class="btn-cancel">Cancel</button>
+            <button class="btn-save">Save</button>
+            <h2>Edit Parcel</h2>
+            <hr>
+            <div class="form-container" id="create-parcel">
+                <form id="create-parcel-form">
+                    <!-- parcel name input -->
+                    <label>Parcel name</label>
+                    <input type="text" id="parcelName" name="parcelName">
+                    <!-- description input  -->
+                    <label>Description</label>
+                    <input type="text" id="desc" name="desc">
+                    <div class="inline-input">
+                        <!-- location input -->
+                        <label for="from">Location</label>
+                        <select id="from">
+                            <option>From here </option>
+                        </select>
+                    </div>
+                    <div class="inline-input">
+                        <!-- destination input -->
+                        <label for="to">Destination</label>
+                        <select id="to">
+                            <option>To here </option>
+                        </select>
+                    </div>
+                    <div class="inline-input">
+                        <!-- parcel weight input -->
+                        <label for="weight">Weight (Kg)</label>
+                        <input type="number" id="weight" name="weight">
+                    </div>
+                    <div class="inline-input">
+                        <!-- parcel price input -->
+                        <label for="price">Price 500 Rwf/Kg</label>
+                        <input type="number" id="price" name="price">
+                    </div>
+                </form>
+            </div>
+        </div>
+     <script src="build/app.js"></script>
 </body>
 </html>
