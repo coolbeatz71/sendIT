@@ -502,11 +502,6 @@ table .btn-group-action button{
     margin-bottom: 20px;
 }
 
-.inline-input option{
-   font-size: 14px;
-   font-weight: bold;
-}
-
 #create-parcel-form .btn-submit{
     display: block;
     padding: 14px;
@@ -561,31 +556,3 @@ table .btn-group-action button{
     background: #d60000;
 }
 
-/*order status badges*/
-.order-status{
-    font-weight: bold;
-    font-size: 16px;
-}
-
-.order-status span{
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #fff;
-    border-radius: 20px;
-    box-shadow: 1px 1px 1px #ccc;
-}
-
-.order-status .delivered{
-    background: #19df56;
-}
-
-.order-status .in-transit{
-    background: #ff9600;
-}
-
-.order-status .cancelled{
-    background: #ff1e48;
-}
