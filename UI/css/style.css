@@ -121,27 +121,27 @@ ul{
 
 /***************************************************************************************/
 /*sign-in form*/
-#sign-in-form{
+#sign-in-form, #sign-in-form-admin{
     display: none;
     margin: auto;
     padding: 80px;
     width: 70%;
 }
 
-#sign-in-form label{
+#sign-in-form label, #sign-in-form-admin label{
     display: block;
     font-weight: bold;
     font-size: 14px;
 }
 
-#sign-in-form input{
+#sign-in-form input, #sign-in-form-admin input{
     display: block;
     padding: 14px;
     width: 90%;
     margin-bottom: 20px;
 }
 
-#sign-in-form .btn-submit{
+#sign-in-form .btn-submit, #sign-in-form-admin .btn-submit{
     display: block;
     padding: 14px;
     margin-bottom: 10px;
@@ -153,7 +153,7 @@ ul{
     font-weight: bold;
 }
 
-#sign-in-form .btn-submit:hover{
+#sign-in-form .btn-submit:hover, #sign-in-form-admin .btn-submit:hover{
     background: #0069d9 !important;
     border: 3px solid rgba(0, 98, 204, .4) !important;
 }
@@ -535,7 +535,6 @@ table .btn-group-action button{
 }
 
 .btn-cancel{
-    text-decoration: none;
     display: inline;
     float: right;
     padding: 14px;
@@ -594,41 +593,4 @@ table .btn-group-action button{
 
 .parcel-number #cancelled{
     background: #ff046e;
-}
-
-select{
-    padding: 18px;
-    width: 97%;
-    margin-bottom: 20px;
-}
-
-.parcel-detail{
-    margin-top: 120px;
-}
-
-.parcel-detail #info{
-    float: left;
-    width: 50%;
-    margin-right: 10px;
-}
-
-.parcel-detail #map{
-    margin-top: -112px;
-    height: 427px;
-    float: right;
-    width: 46%;
-}
-
-#info td, th {
-    border: groove 1px #fff;
-    text-align: left;
-    padding: 16px;
-}
-
-#info tr:nth-child(even) {
-    background-color: #eee;
-}
-
-#info tr:nth-child(odd) {
-    background-color: #fff;
 }
