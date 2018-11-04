@@ -20,116 +20,162 @@ var transitParcels = document.getElementById('transit-parcels');
 var deliveredParcels = document.getElementById('delivered-parcels');
 var cancelledParcels = document.getElementById('cancelled-parcels');
 
+var signInAdmin = document.querySelector("#sign-in-admin");
+var signInFormAdmin = document.querySelector("#sign-in-form-admin");
+
+/*
+    check if an element is in the DOM
+    @params element
+    @params callback
+ */
 var isElementExist = function isElementExist(element, callback) {
     if (typeof element != 'undefined' && element != null) {
         callback();
     }
 };
 
+/**
+ * change the display of an HTML element 
+ * @param  DOM element 
+ * @param  string value
+ */
+var setDisplay = function setDisplay(element, value) {
+    element.style.display = value;
+};
+
+/*
+    * open a modal page
+ */
+var openModal = function openModal() {
+    setDisplay(modal, 'block');
+};
+
+/**
+ * display the sign up modal page
+ */
+var _gotoSignUp = function _gotoSignUp() {
+    setDisplay(signUpForm, 'block');
+    setDisplay(signInForm, 'none');
+};
+
+/**
+ * display the sign in modal page
+ */
+var _gotoSignIn = function _gotoSignIn() {
+    setDisplay(signInForm, 'block');
+    setDisplay(signUpForm, 'none');
+};
+
+var _gotoSignInAdmin = function _gotoSignInAdmin() {
+    setDisplay(signInFormAdmin, 'block');
+    setDisplay(signInForm, 'none');
+    setDisplay(signUpForm, 'none');
+};
+
 isElementExist(btnCreateParcel, function () {
-    btnCreateParcel.addEventListener('click', function () {
-        //open the modal
-        modal.style.display = 'block';
-    });
+    btnCreateParcel.addEventListener('click', openModal());
 });
 
 isElementExist(linkAllParcels, function () {
     linkAllParcels.addEventListener('click', function () {
-        allParcels.style.display = 'block';
-        transitParcels.style.display = 'none';
-        deliveredParcels.style.display = 'none';
-        cancelledParcels.style.display = 'none';
+
+        setDisplay(allParcels, 'block');
+        setDisplay(transitParcels, 'none');
+        setDisplay(deliveredParcels, 'none');
+        setDisplay(cancelledParcels, 'none');
     });
 });
 
 window.addEventListener('load', function () {
     isElementExist(allParcels, function () {
-        allParcels.style.display = 'block';
+        setDisplay(allParcels, 'block');
     });
     isElementExist(transitParcels, function () {
-        transitParcels.style.display = 'none';
+        setDisplay(transitParcels, 'none');
     });
     isElementExist(deliveredParcels, function () {
-        deliveredParcels.style.display = 'none';
+        setDisplay(deliveredParcels, 'none');
     });
     isElementExist(cancelledParcels, function () {
-        cancelledParcels.style.display = 'none';
+        setDisplay(cancelledParcels, 'none');
     });
 });
 
 isElementExist(linkTransitParcels, function () {
     linkTransitParcels.addEventListener('click', function () {
-        allParcels.style.display = 'none';
-        transitParcels.style.display = 'block';
-        deliveredParcels.style.display = 'none';
-        cancelledParcels.style.display = 'none';
+        setDisplay(allParcels, 'none');
+        setDisplay(transitParcels, 'block');
+        setDisplay(deliveredParcels, 'none');
+        setDisplay(cancelledParcels, 'none');
     });
 });
 
 isElementExist(linkDeliveredParcels, function () {
     linkDeliveredParcels.addEventListener('click', function () {
-        allParcels.style.display = 'none';
-        transitParcels.style.display = 'none';
-        deliveredParcels.style.display = 'block';
-        cancelledParcels.style.display = 'none';
+        setDisplay(allParcels, 'none');
+        setDisplay(transitParcels, 'none');
+        setDisplay(deliveredParcels, 'block');
+        setDisplay(cancelledParcels, 'none');
     });
 });
 
 isElementExist(linkCancelledParcels, function () {
     linkCancelledParcels.addEventListener('click', function () {
-        allParcels.style.display = 'none';
-        transitParcels.style.display = 'none';
-        deliveredParcels.style.display = 'none';
-        cancelledParcels.style.display = 'block';
+        setDisplay(allParcels, 'none');
+        setDisplay(transitParcels, 'none');
+        setDisplay(deliveredParcels, 'none');
+        setDisplay(cancelledParcels, 'block');
     });
 });
 
 isElementExist(btnStart, function () {
     btnStart.addEventListener('click', function () {
         //open the modal
-        modal.style.display = 'block';
+        openModal();
 
         //and the signUp form
-        signInForm.style.display = 'none';
-        signUpForm.style.display = 'block';
+        _gotoSignUp();
     });
 });
 
 isElementExist(btnClose, function () {
     btnClose.addEventListener('click', function () {
-        modal.style.display = 'none';
+        setDisplay(modal, 'none');
     });
 });
 
 isElementExist(signInLink, function () {
     signInLink.addEventListener('click', function () {
         //open the modal
-        modal.style.display = 'block';
+        openModal();
 
         //and the signIn form
-        signUpForm.style.display = 'none';
-        signInForm.style.display = 'block';
+        _gotoSignIn();
     });
 });
 
 isElementExist(gotoSignIn, function () {
-    gotoSignIn.addEventListener('click', function () {
-        signUpForm.style.display = 'none';
-        signInForm.style.display = 'block';
-    });
+    gotoSignIn.addEventListener('click', _gotoSignIn());
 });
 
 isElementExist(gotoSignUp, function () {
-    gotoSignUp.addEventListener('click', function () {
-        signInForm.style.display = 'none';
-        signUpForm.style.display = 'block';
-    });
+    gotoSignUp.addEventListener('click', _gotoSignUp());
 });
 
 window.addEventListener('click', function (e) {
     isElementExist(modal, function () {
         if (e.target == modal) {
-            modal.style.display = 'none';
+            setDisplay(modal, 'none');
         }
+    });
+});
+
+isElementExist(signInAdmin, function () {
+    signInAdmin.addEventListener('click', function () {
+        //open the modal
+        openModal();
+
+        //and the signIn form admin
+        _gotoSignInAdmin();
     });
 });
