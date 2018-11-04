@@ -1,84 +1,85 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <title>SendIT - Parcel details</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <!-- here the header containing the navbar -->
-        <header>
-            <div class="container">
-                <!-- brand name -->
-                <div id="branding">
-                    <h1>Send<span class="highlight">IT</span></h1>
-                </div>
-                <!-- here the nav containing links-->
-                <nav>
-                    <ul>
-                        <li><a>Logout</a></li>
-                    </ul>
-                </nav>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>SendIT - User profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- here the header containing the navbar -->
+    <header>
+        <div class="container">
+            <!-- brand name -->
+            <div id="branding">
+                <h1>Send<span class="highlight">IT</span></h1>
             </div>
-        </header>
-        <!-- sidenav bar  -->
-        <aside class="sidenav" id="sidebar">
-            <ul>
-                <li id="link-all-parcels"><a>All parcels</a></li>
-                <li id="link-transit-parcels"><a>In transit</a></li>
-                <li id="link-delivered-parcels"><a>Delivered</a></li>
-                <li id="link-cancelled-parcels"><a>Canceled</a></li>
-            </ul>
-        </aside>
-        <!-- section for tables -->
-        <section class="main">
-            <div class="container" id="all-parcels">
-                <button class="btn-cancel" id="go-back"> < Back</button>
-                <h2>Parcel details</h2>
-                <hr>
-                <div class="order-status">
-                    <p>Order status: 
-                        <span class="delivered">Delivered</span>
-                        <span class="in-transit">In transit</span>
-                        <span class="cancelled">Cancelled</span>
-                    </p>
-                </div>
-                <div class="form-container" id="create-parcel">
-                    <form id="create-parcel-form">
-                        <!-- parcel name input -->
-                        <label>Parcel name</label>
-                        <input type="text" id="parcelName" name="parcelName">
-                        <!-- description input  -->
-                        <label>Description</label>
-                        <input type="text" id="desc" name="desc">
-                        <div class="inline-input">
-                            <!-- location input -->
-                            <label for="from">Location</label>
-                            <select id="from">
-                                <option>From here </option>
-                            </select>
-                        </div>
-                        <div class="inline-input">
-                            <!-- destination input -->
-                            <label for="to">Destination</label>
-                            <select id="to">
-                                <option>To here </option>
-                            </select>
-                        </div>
-                        <div class="inline-input">
-                            <!-- parcel weight input -->
-                            <label for="weight">Weight (Kg)</label>
-                            <input type="number" id="weight" name="weight">
-                        </div>
-                        <div class="inline-input">
-                            <!-- parcel price input -->
-                            <label for="price">Price 500 Rwf/Kg</label>
-                            <input type="number" id="price" name="price">
-                        </div>
-                    </form>
-                </div>
-            </div>
-         <script src="build/app.js"></script>
-    </body>
+            <!-- here the nav containing links-->
+            <nav>
+                <ul>
+                    <li><a>Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- section for displaying the parcel details -->
+    <div class="container">
+        <section class="parcel-detail">
+            <a class="btn-cancel" href="userProfile.html"> < Back</a>
+            <h2>Parcel details</h2>
+            <hr>
+            <table id="info">
+                <tr>
+                    <th>Id N°</th>
+                    <td>454253</td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td>Nike Shoes</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. </td>
+                </tr>
+                <tr>
+                    <th>Location</th>
+                    <td>Rwanda</td>
+                </tr>
+                <tr>
+                    <th>Destination</th>
+                    <td>D.R.Congo</td>
+                </tr>
+                <tr>
+                    <th>Weight</th>
+                    <td>600 Kg</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>300 000 Rwf</td>
+                </tr>
+            </table>
+        </section>
+        <!-- section for displaying the the parcel using google map -->
+        <section class="parcel-detail">
+            <div id="map"></div>
+        </section>
+    </div>
+    <script>
+        function initMap(){
+            var options = {
+                zoom: 8,
+                center: {
+                    lat: 42.36801,
+                    lng: -71.0589
+                }
+            }
+
+            var map = new google.maps.Map(document.getElementById('map'), options);
+        }
+    </script>
+    <script src="build/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcVoZuP6eeamWtSEaWgY_yzqf_oFUMi9U&callback=initMap"
+    async defer></script>
+</body>
 </html>
