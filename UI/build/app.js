@@ -8,7 +8,9 @@ var gotoSignIn = document.querySelector("#goto-sign-in");
 var signUpForm = document.querySelector("#sign-up-form");
 var signInForm = document.querySelector("#sign-in-form");
 var signInLink = document.querySelector("#sign-in-link");
-var btnCreateParcel = document.querySelector(".btn-create");
+var btnCreateParcel = document.querySelectorAll(".btn-create");
+
+console.log(btnCreateParcel[0]);
 
 var linkAllParcels = document.getElementById('link-all-parcels');
 var linkTransitParcels = document.getElementById('link-transit-parcels');
@@ -72,17 +74,45 @@ var _gotoSignInAdmin = function _gotoSignInAdmin() {
     setDisplay(signUpForm, 'none');
 };
 
+var setAllParcel = function setAllParcel() {
+    setDisplay(allParcels, 'block');
+    setDisplay(transitParcels, 'none');
+    setDisplay(deliveredParcels, 'none');
+    setDisplay(cancelledParcels, 'none');
+};
+
+var setTransitParcel = function setTransitParcel() {
+    setDisplay(allParcels, 'none');
+    setDisplay(transitParcels, 'block');
+    setDisplay(deliveredParcels, 'none');
+    setDisplay(cancelledParcels, 'none');
+};
+
+var setDeliveredParcel = function setDeliveredParcel() {
+    setDisplay(allParcels, 'none');
+    setDisplay(transitParcels, 'none');
+    setDisplay(deliveredParcels, 'block');
+    setDisplay(cancelledParcels, 'none');
+};
+
+var setCancelledParcel = function setCancelledParcel() {
+    setDisplay(allParcels, 'none');
+    setDisplay(transitParcels, 'none');
+    setDisplay(deliveredParcels, 'none');
+    setDisplay(cancelledParcels, 'block');
+};
+
 isElementExist(btnCreateParcel, function () {
-    btnCreateParcel.addEventListener('click', openModal());
+    btnCreateParcel.forEach(function (el) {
+        el.addEventListener('click', function () {
+            openModal();
+        });
+    });
 });
 
 isElementExist(linkAllParcels, function () {
     linkAllParcels.addEventListener('click', function () {
-
-        setDisplay(allParcels, 'block');
-        setDisplay(transitParcels, 'none');
-        setDisplay(deliveredParcels, 'none');
-        setDisplay(cancelledParcels, 'none');
+        setAllParcel();
     });
 });
 
@@ -103,28 +133,19 @@ window.addEventListener('load', function () {
 
 isElementExist(linkTransitParcels, function () {
     linkTransitParcels.addEventListener('click', function () {
-        setDisplay(allParcels, 'none');
-        setDisplay(transitParcels, 'block');
-        setDisplay(deliveredParcels, 'none');
-        setDisplay(cancelledParcels, 'none');
+        setTransitParcel();
     });
 });
 
 isElementExist(linkDeliveredParcels, function () {
     linkDeliveredParcels.addEventListener('click', function () {
-        setDisplay(allParcels, 'none');
-        setDisplay(transitParcels, 'none');
-        setDisplay(deliveredParcels, 'block');
-        setDisplay(cancelledParcels, 'none');
+        setDeliveredParcel();
     });
 });
 
 isElementExist(linkCancelledParcels, function () {
     linkCancelledParcels.addEventListener('click', function () {
-        setDisplay(allParcels, 'none');
-        setDisplay(transitParcels, 'none');
-        setDisplay(deliveredParcels, 'none');
-        setDisplay(cancelledParcels, 'block');
+        setCancelledParcel();
     });
 });
 
@@ -155,11 +176,15 @@ isElementExist(signInLink, function () {
 });
 
 isElementExist(gotoSignIn, function () {
-    gotoSignIn.addEventListener('click', _gotoSignIn());
+    gotoSignIn.addEventListener('click', function () {
+        _gotoSignIn();
+    });
 });
 
 isElementExist(gotoSignUp, function () {
-    gotoSignUp.addEventListener('click', _gotoSignUp());
+    gotoSignUp.addEventListener('click', function () {
+        _gotoSignUp();
+    });
 });
 
 window.addEventListener('click', function (e) {

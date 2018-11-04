@@ -6,7 +6,9 @@ let gotoSignIn = document.querySelector("#goto-sign-in");
 let signUpForm = document.querySelector("#sign-up-form");
 let signInForm = document.querySelector("#sign-in-form");
 let signInLink = document.querySelector("#sign-in-link");
-let btnCreateParcel = document.querySelector(".btn-create");
+let btnCreateParcel = document.querySelectorAll(".btn-create");
+
+console.log(btnCreateParcel[0]);
 
 let linkAllParcels       = document.getElementById('link-all-parcels');
 let linkTransitParcels   = document.getElementById('link-transit-parcels');
@@ -99,30 +101,42 @@ let setCancelledParcel = () => {
 }
 
 isElementExist(btnCreateParcel, () => {
-    btnCreateParcel.addEventListener('click', openModal());
+    btnCreateParcel.forEach((el) => {
+        el.addEventListener('click', () => {
+            openModal();
+        });
+    });
 });
 
 isElementExist(linkAllParcels, () => {
-    linkAllParcels.addEventListener('click', setAllParcel());
+    linkAllParcels.addEventListener('click', () => {
+        setAllParcel();
+    });
 });
 
 window.addEventListener('load', () => {
-    isElementExist(allParcels, setDisplay(allParcels, 'block'));
-    isElementExist(transitParcels, setDisplay(transitParcels, 'none'));
-    isElementExist(deliveredParcels, setDisplay(deliveredParcels, 'none'));
-    isElementExist(cancelledParcels, setDisplay(cancelledParcels, 'none'));
+    isElementExist(allParcels, () => { setDisplay(allParcels, 'block')});
+    isElementExist(transitParcels, () => { setDisplay(transitParcels, 'none')});
+    isElementExist(deliveredParcels, () => { setDisplay(deliveredParcels, 'none')});
+    isElementExist(cancelledParcels, () => { setDisplay(cancelledParcels, 'none')});
 });
 
 isElementExist(linkTransitParcels, () => {
-    linkTransitParcels.addEventListener('click', setTransitParcel());
+    linkTransitParcels.addEventListener('click', () => {
+        setTransitParcel();
+    });
 });
 
 isElementExist(linkDeliveredParcels, () => {
-    linkDeliveredParcels.addEventListener('click', setDeliveredParcel());    
+    linkDeliveredParcels.addEventListener('click', () => {
+        setDeliveredParcel();    
+    });
 });
 
 isElementExist(linkCancelledParcels, () => {
-    linkCancelledParcels.addEventListener('click', setCancelledParcel());
+    linkCancelledParcels.addEventListener('click', () => {
+        setCancelledParcel();
+    });
 });
 
 isElementExist(btnStart, () => {
@@ -153,11 +167,15 @@ isElementExist(signInLink, () => {
 });
 
 isElementExist(gotoSignIn, () => {
-    gotoSignIn.addEventListener('click', _gotoSignIn());
+    gotoSignIn.addEventListener('click', () => {
+        _gotoSignIn();
+    });
 });
 
 isElementExist(gotoSignUp, () => {
-    gotoSignUp.addEventListener('click', _gotoSignUp());
+    gotoSignUp.addEventListener('click', () => {
+        _gotoSignUp();
+    });
 });
 
 window.addEventListener('click', (e) => {
