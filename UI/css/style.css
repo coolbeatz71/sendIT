@@ -22,7 +22,7 @@ ul{
 /***************************************************************************************/
 /*modal for the signUp and signIn pages*/
 .modal{
-    display: block;
+    display: none;
     position: fixed;
     z-index: 4;
     left: 0;
@@ -121,27 +121,27 @@ ul{
 
 /***************************************************************************************/
 /*sign-in form*/
-#sign-in-form{
+#sign-in-form, #sign-in-form-admin{
     display: none;
     margin: auto;
     padding: 80px;
     width: 70%;
 }
 
-#sign-in-form label{
+#sign-in-form label, #sign-in-form-admin label{
     display: block;
     font-weight: bold;
     font-size: 14px;
 }
 
-#sign-in-form input{
+#sign-in-form input, #sign-in-form-admin input{
     display: block;
     padding: 14px;
     width: 90%;
     margin-bottom: 20px;
 }
 
-#sign-in-form .btn-submit{
+#sign-in-form .btn-submit, #sign-in-form-admin .btn-submit{
     display: block;
     padding: 14px;
     margin-bottom: 10px;
@@ -153,7 +153,7 @@ ul{
     font-weight: bold;
 }
 
-#sign-in-form .btn-submit:hover{
+#sign-in-form .btn-submit:hover, #sign-in-form-admin .btn-submit:hover{
     background: #0069d9 !important;
     border: 3px solid rgba(0, 98, 204, .4) !important;
 }

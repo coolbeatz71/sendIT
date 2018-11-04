@@ -18,109 +18,156 @@ let transitParcels   = document.getElementById('transit-parcels');
 let deliveredParcels = document.getElementById('delivered-parcels');
 let cancelledParcels = document.getElementById('cancelled-parcels');
 
+let signInAdmin     = document.querySelector("#sign-in-admin");
+let signInFormAdmin = document.querySelector("#sign-in-form-admin");
+
+/*
+    check if an element is in the DOM
+    @params element
+    @params callback
+ */
 let isElementExist = (element, callback) =>{
     if(typeof(element) != 'undefined' && element != null){
         callback();
     }
 }
 
+/**
+ * change the display of an HTML element 
+ * @param  DOM element 
+ * @param  string value
+ */
+let setDisplay = (element, value) => {
+    element.style.display = value;
+}
+
+/*
+    * open a modal page
+ */
+let openModal = () => {
+    setDisplay(modal, 'block'); 
+}
+
+/**
+ * display the sign up modal page
+ */
+let _gotoSignUp = () => {
+    setDisplay(signUpForm, 'block');
+    setDisplay(signInForm, 'none');
+}
+
+/**
+ * display the sign in modal page
+ */
+let _gotoSignIn = () => {
+    setDisplay(signInForm, 'block');
+    setDisplay(signUpForm, 'none');
+}
+
+let _gotoSignInAdmin = () => {
+    setDisplay(signInFormAdmin, 'block');
+    setDisplay(signInForm, 'none');
+    setDisplay(signUpForm, 'none');
+}
+
 isElementExist(btnCreateParcel, () => {
-    btnCreateParcel.addEventListener('click', () => {
-       //open the modal
-        modal.style.display = 'block'; 
-    });
+    btnCreateParcel.addEventListener('click', openModal());
 });
 
 isElementExist(linkAllParcels, () => {
     linkAllParcels.addEventListener('click', () => {
-        allParcels.style.display = 'block';
-        transitParcels.style.display = 'none';
-        deliveredParcels.style.display = 'none';
-        cancelledParcels.style.display = 'none';
+
+        setDisplay(allParcels, 'block');
+        setDisplay(transitParcels, 'none');
+        setDisplay(deliveredParcels, 'none');
+        setDisplay(cancelledParcels, 'none');
+
     });
 });
 
 window.addEventListener('load', () => {
-    isElementExist(allParcels, () => { allParcels.style.display = 'block' });
-    isElementExist(transitParcels, () => { transitParcels.style.display = 'none' });
-    isElementExist(deliveredParcels, () => { deliveredParcels.style.display = 'none' });
-    isElementExist(cancelledParcels, () => { cancelledParcels.style.display = 'none' });
+    isElementExist(allParcels, ()       => { setDisplay(allParcels, 'block'); });
+    isElementExist(transitParcels, ()   => { setDisplay(transitParcels, 'none'); });
+    isElementExist(deliveredParcels, () => { setDisplay(deliveredParcels, 'none'); });
+    isElementExist(cancelledParcels, () => { setDisplay(cancelledParcels, 'none'); });
 });
 
 isElementExist(linkTransitParcels, () => {
     linkTransitParcels.addEventListener('click', () => {
-        allParcels.style.display = 'none';
-        transitParcels.style.display = 'block';
-        deliveredParcels.style.display = 'none';
-        cancelledParcels.style.display = 'none';
+        setDisplay(allParcels, 'none');
+        setDisplay(transitParcels, 'block');
+        setDisplay(deliveredParcels, 'none');
+        setDisplay(cancelledParcels, 'none');
     });
 });
 
 isElementExist(linkDeliveredParcels, () => {
     linkDeliveredParcels.addEventListener('click', () => {
-        allParcels.style.display = 'none';
-        transitParcels.style.display = 'none';
-        deliveredParcels.style.display = 'block';
-        cancelledParcels.style.display = 'none';
+        setDisplay(allParcels, 'none');
+        setDisplay(transitParcels, 'none');
+        setDisplay(deliveredParcels, 'block');
+        setDisplay(cancelledParcels, 'none');
     });    
 });
 
 isElementExist(linkCancelledParcels, () => {
     linkCancelledParcels.addEventListener('click', () => {
-        allParcels.style.display = 'none';
-        transitParcels.style.display = 'none';
-        deliveredParcels.style.display = 'none';
-        cancelledParcels.style.display = 'block';
+        setDisplay(allParcels, 'none');
+        setDisplay(transitParcels, 'none');
+        setDisplay(deliveredParcels, 'none');
+        setDisplay(cancelledParcels, 'block');
     });
 });
 
 isElementExist(btnStart, () => {
     btnStart.addEventListener('click', () => {
         //open the modal
-        modal.style.display = 'block';
+        openModal();
 
         //and the signUp form
-        signInForm.style.display = 'none';
-        signUpForm.style.display = 'block';
+        _gotoSignUp();
     });
 });
 
 isElementExist(btnClose, () => {
     btnClose.addEventListener('click', () => {
-        modal.style.display = 'none';
+        setDisplay(modal, 'none');
     });
 });
 
 isElementExist(signInLink, () => {
     signInLink.addEventListener('click', () => {
         //open the modal
-        modal.style.display = 'block';
+        openModal();
 
         //and the signIn form
-        signUpForm.style.display = 'none';
-        signInForm.style.display = 'block';
+        _gotoSignIn();
 
     });
 });
 
 isElementExist(gotoSignIn, () => {
-    gotoSignIn.addEventListener('click', () => {
-        signUpForm.style.display = 'none';
-        signInForm.style.display = 'block';
-    });
+    gotoSignIn.addEventListener('click', _gotoSignIn());
 });
 
 isElementExist(gotoSignUp, () => {
-    gotoSignUp.addEventListener('click', () => {
-        signInForm.style.display = 'none';
-        signUpForm.style.display = 'block';
-    });
+    gotoSignUp.addEventListener('click', _gotoSignUp());
 });
 
 window.addEventListener('click', (e) => {
     isElementExist(modal, () => {
         if(e.target == modal){
-            modal.style.display = 'none';
+            setDisplay(modal, 'none');
         }
     });
-})
+});
+
+isElementExist(signInAdmin, () => {
+    signInAdmin.addEventListener('click', () => {
+        //open the modal
+        openModal();
+
+        //and the signIn form admin
+        _gotoSignInAdmin();
+    });
+});
