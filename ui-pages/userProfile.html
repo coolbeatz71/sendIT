@@ -34,7 +34,19 @@
     <!-- section for tables -->
     <section class="main">
         <div class="container" id="all-parcels">
-            <button class="btn-create">New Parcel</button>
+            <!-- display number of each parcel categories  -->
+            <ul class="parcel-number">
+                    <!-- <table>
+                        <tr>
+                            <th></th>
+                        </tr>
+                    </table> -->
+                    <li class="numbers" id="all">All parcels: <span>27</span></li>
+                    <li class="numbers" id="delivered">Delivered: <span>12</span></li>
+                    <li class="numbers" id="transit">In transit: <span>3</span></li>
+                    <li class="numbers" id="cancelled">Cancelled: <span>12</span></li>
+            </ul>
+            <button class="btn-create" id="btn-create">New Parcel</button>
             <h2>All my parcels</h2>
             <hr>
             <div class="table-area">

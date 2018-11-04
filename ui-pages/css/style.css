@@ -556,3 +556,41 @@ table .btn-group-action button{
     background: #d60000;
 }
 
+.parcel-number{
+    text-align: center;
+    list-style: none;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.parcel-number .numbers{
+    width: 20%;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.parcel-number .numbers:hover{
+    cursor: pointer;
+    border-left:solid 1px #ccc;
+    border-right:solid 1px #ccc; 
+}
+
+.parcel-number #all{
+    background: #15c336;
+}
+
+.parcel-number #delivered{
+    background: #003cff;
+}
+
+.parcel-number #transit{
+    background: #a4a0a0;
+}
+
+.parcel-number #cancelled{
+    background: #ff046e;
+}
