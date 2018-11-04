@@ -40,36 +40,17 @@
             <hr>
             <div class="form-container" id="create-parcel">
                 <form id="create-parcel-form">
-                    <!-- parcel name input -->
-                    <label>Parcel name</label>
-                    <input type="text" id="parcelName" name="parcelName">
-                    <!-- description input  -->
-                    <label>Description</label>
-                    <input type="text" id="desc" name="desc">
-                    <div class="inline-input">
-                        <!-- location input -->
-                        <label for="from">Location</label>
+                    <!-- pickup input -->
+                        <label for="from"> Pickup Location</label>
                         <select id="from">
                             <option>From here </option>
                         </select>
-                    </div>
-                    <div class="inline-input">
-                        <!-- destination input -->
-                        <label for="to">Destination</label>
-                        <select id="to">
-                            <option>To here </option>
-                        </select>
-                    </div>
-                    <div class="inline-input">
-                        <!-- parcel weight input -->
-                        <label for="weight">Weight (Kg)</label>
-                        <input type="number" id="weight" name="weight">
-                    </div>
-                    <div class="inline-input">
-                        <!-- parcel price input -->
-                        <label for="price">Price 500 Rwf/Kg</label>
-                        <input type="number" id="price" name="price">
-                    </div>
+                    <label>Status</label>
+                    <select id="status">
+                        <option>Delivered</option>
+                        <option>In status</option>
+                        <option>Cancelled</option>
+                    </select>
                 </form>
             </div>
         </div>
