@@ -70,53 +70,59 @@ let _gotoSignInAdmin = () => {
     setDisplay(signUpForm, 'none');
 }
 
+let setAllParcel = () => {
+    setDisplay(allParcels, 'block');
+    setDisplay(transitParcels, 'none');
+    setDisplay(deliveredParcels, 'none');
+    setDisplay(cancelledParcels, 'none');
+}
+
+let setTransitParcel = () => {
+    setDisplay(allParcels, 'none');
+    setDisplay(transitParcels, 'block');
+    setDisplay(deliveredParcels, 'none');
+    setDisplay(cancelledParcels, 'none');
+}
+
+let setDeliveredParcel = () => {
+    setDisplay(allParcels, 'none');
+    setDisplay(transitParcels, 'none');
+    setDisplay(deliveredParcels, 'block');
+    setDisplay(cancelledParcels, 'none');
+}
+
+let setCancelledParcel = () => {
+    setDisplay(allParcels, 'none');
+    setDisplay(transitParcels, 'none');
+    setDisplay(deliveredParcels, 'none');
+    setDisplay(cancelledParcels, 'block');
+}
+
 isElementExist(btnCreateParcel, () => {
     btnCreateParcel.addEventListener('click', openModal());
 });
 
 isElementExist(linkAllParcels, () => {
-    linkAllParcels.addEventListener('click', () => {
-
-        setDisplay(allParcels, 'block');
-        setDisplay(transitParcels, 'none');
-        setDisplay(deliveredParcels, 'none');
-        setDisplay(cancelledParcels, 'none');
-
-    });
+    linkAllParcels.addEventListener('click', setAllParcel());
 });
 
 window.addEventListener('load', () => {
-    isElementExist(allParcels, ()       => { setDisplay(allParcels, 'block'); });
-    isElementExist(transitParcels, ()   => { setDisplay(transitParcels, 'none'); });
-    isElementExist(deliveredParcels, () => { setDisplay(deliveredParcels, 'none'); });
-    isElementExist(cancelledParcels, () => { setDisplay(cancelledParcels, 'none'); });
+    isElementExist(allParcels, setDisplay(allParcels, 'block'));
+    isElementExist(transitParcels, setDisplay(transitParcels, 'none'));
+    isElementExist(deliveredParcels, setDisplay(deliveredParcels, 'none'));
+    isElementExist(cancelledParcels, setDisplay(cancelledParcels, 'none'));
 });
 
 isElementExist(linkTransitParcels, () => {
-    linkTransitParcels.addEventListener('click', () => {
-        setDisplay(allParcels, 'none');
-        setDisplay(transitParcels, 'block');
-        setDisplay(deliveredParcels, 'none');
-        setDisplay(cancelledParcels, 'none');
-    });
+    linkTransitParcels.addEventListener('click', setTransitParcel());
 });
 
 isElementExist(linkDeliveredParcels, () => {
-    linkDeliveredParcels.addEventListener('click', () => {
-        setDisplay(allParcels, 'none');
-        setDisplay(transitParcels, 'none');
-        setDisplay(deliveredParcels, 'block');
-        setDisplay(cancelledParcels, 'none');
-    });    
+    linkDeliveredParcels.addEventListener('click', setDeliveredParcel());    
 });
 
 isElementExist(linkCancelledParcels, () => {
-    linkCancelledParcels.addEventListener('click', () => {
-        setDisplay(allParcels, 'none');
-        setDisplay(transitParcels, 'none');
-        setDisplay(deliveredParcels, 'none');
-        setDisplay(cancelledParcels, 'block');
-    });
+    linkCancelledParcels.addEventListener('click', setCancelledParcel());
 });
 
 isElementExist(btnStart, () => {
