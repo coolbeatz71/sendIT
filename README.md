@@ -23,5 +23,5 @@ The UI contains an welcome page containing a:
   - [parcelDetail](https://coolbeatz71.github.io/sendIT/UI/parcelDetail.html) to see detail for a particular delivery order and display Google Map with Markers, etc.
   - [editParcel](https://coolbeatz71.github.io/sendIT/UI/editParcel.html) to edit the destination of an delivery order
   - [adminProfile](https://coolbeatz71.github.io/sendIT/UI/adminProfile.html) to see number of all parcel, see detail of each delivery order and to edit the pick up location of a particular order
-  - [adminEditParcel](https://coolbeatz71.github.io/sendIT/UI/adminEditParcel.html) to edit the pick up location
+  - [adminEditParcel](https://coolbeatz71.github.io/sendIT/UI/adminEditParcel.html) to edit the pick up location and the order status
  
