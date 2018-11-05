@@ -46,7 +46,6 @@
                     <li class="numbers" id="transit">In transit: <span>3</span></li>
                     <li class="numbers" id="cancelled">Cancelled: <span>12</span></li>
             </ul>
-            <button class="btn-create" id="btn-create">New Parcel</button>
             <h2>All my parcels</h2>
             <hr>
             <div class="table-area">
@@ -70,8 +69,7 @@
                             <td>
                                 <div class="btn-group-action">
                                     <button id="btn-details">details</button>
-                                    <button id="btn-edit">edit</button>
-                                    <button id="btn-cancel">cancel</button>
+                                    <button id="btn-edit-admin">edit</button>
                                 </div>
                             </td>
                         </tr>
@@ -120,7 +118,6 @@
             </div>
         </div>
         <div class="container" id="transit-parcels">
-            <button class="btn-create">New Parcel</button>
             <h2>Parcels in transit</h2>
             <hr>
             <div class="table-area">
@@ -152,8 +149,7 @@
                             <td>
                                 <div class="btn-group-action">
                                     <button id="btn-details">details</button>
-                                    <button id="btn-edit">edit</button>
-                                    <button id="btn-cancel">cancel</button>
+                                    <button id="btn-edit-admin">edit</button>
                                 </div>
                             </td>
                         </tr>
@@ -194,7 +190,6 @@
             </div>
         </div>
         <div class="container" id="delivered-parcels">
-            <button class="btn-create">New Parcel</button>
             <h2>Delivered Parcels</h2>
             <hr>
             <div class="table-area">
@@ -234,8 +229,7 @@
                             <td>
                                 <div class="btn-group-action">
                                     <button id="btn-details">details</button>
-                                    <button id="btn-edit">edit</button>
-                                    <button id="btn-cancel">cancel</button>
+                                    <button id="btn-edit-admin">edit</button>
                                 </div>
                             </td>
                         </tr>
@@ -268,7 +262,6 @@
             </div>
         </div>
         <div class="container" id="cancelled-parcels">
-            <button class="btn-create">New Parcel</button>
             <h2>Cancelled Parcels</h2>
             <hr>
             <div class="table-area">
@@ -324,8 +317,7 @@
                             <td>
                                 <div class="btn-group-action">
                                     <button id="btn-details">details</button>
-                                    <button id="btn-edit">edit</button>
-                                    <button id="btn-cancel">cancel</button>
+                                    <button id="btn-edit-admin">edit</button>
                                 </div>
                             </td>
                         </tr>
@@ -342,49 +334,6 @@
             </div>
         </div>
     </section>
-    <!-- section for displaying createParcel modal -->
-    <div id="modal-sign-up" class="modal">
-        <div class="modal-content">
-            <span class="btn-close-modal">&times;</span>
-            <div class="form-container" id="create-parcel">
-                <form id="create-parcel-form">
-                    <h2>Parcel creation</h2>
-                    <!-- parcel name input -->
-                    <label>Parcel name</label>
-                    <input type="text" id="parcelName" name="parcelName">
-                    <!-- description input  -->
-                    <label>Description</label>
-                    <input type="text" id="desc" name="desc">
-                    <div class="inline-input">
-                        <!-- location input -->
-                        <label for="from">Location</label>
-                        <select id="from">
-                            <option>From here </option>
-                        </select>
-                    </div>
-                    <div class="inline-input">
-                        <!-- destination input -->
-                        <label for="to">Destination</label>
-                        <select id="to">
-                            <option>To here </option>
-                        </select>
-                    </div>
-                    <div class="inline-input">
-                        <!-- parcel weight input -->
-                        <label for="weight">Weight (Kg)</label>
-                        <input type="number" id="weight" name="weight">
-                    </div>
-                    <div class="inline-input">
-                        <!-- parcel price input -->
-                        <label for="price">Price 500 Rwf/Kg</label>
-                        <input type="number" id="price" name="price">
-                    </div>
-                    <!-- button submit  -->                        
-                    <button id="btn-sign-up" class="btn-submit" name="submit">Send parcel</button>
-                </form>
-            </div>
-        </div>
-    </div>
      <script src="build/app.js"></script>
 </body>
 </html>

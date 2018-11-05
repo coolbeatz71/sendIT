@@ -13,6 +13,7 @@ var btnCreateParcel = document.querySelectorAll(".btn-create");
 var btnDetail = document.querySelectorAll("#btn-details");
 var btnEdit = document.querySelectorAll("#btn-edit");
 var btnCancel = document.querySelectorAll("#btn-cancel");
+var btnEditAdmin = document.querySelectorAll("#btn-edit-admin");
 
 var linkAllParcels = document.getElementById('link-all-parcels');
 var linkTransitParcels = document.getElementById('link-transit-parcels');
@@ -120,6 +121,16 @@ isElementExist(btnEdit, function () {
             console.log(window.location.href);
             //may look for a way of sending params in urls
             window.location.href = "editParcel.html";
+        });
+    });
+});
+
+isElementExist(btnEditAdmin, function () {
+    btnEditAdmin.forEach(function (el) {
+        el.addEventListener('click', function () {
+            console.log(window.location.href);
+            //may look for a way of sending params in urls
+            window.location.href = "adminEditParcel.html";
         });
     });
 });
