@@ -30,19 +30,18 @@ ul{
     height: 100%;
     width: 100%;
     overflow: auto;
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .9);
 }
 
 .modal-content{
-    background: #f4f4f4;
     margin: 2% auto;
     padding: 20px;
     width: 70%;
     height: 86%;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, .2), 0 7px 20px rgba(0, 0, 0, .1);
 }
 
 .modal-content h2{
+    color: #fff;
     text-align: center;
     text-transform: uppercase;
 }
@@ -50,11 +49,11 @@ ul{
 .btn-close-modal{
     color: #ccc;
     float: right;
-    font-size: 30px;
+    font-size: 80px;
 }
 
 .btn-close-modal:hover, .btn-close-modal:focus{
-    color: rgba(0, 0, 0, .7);
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
@@ -62,7 +61,7 @@ ul{
 
 .form-container p{
     cursor: pointer;
-    color: #0042ff;
+    color: #eee;
     font-weight: bold;
     text-decoration: underline;
     text-align: center;
@@ -74,6 +73,8 @@ ul{
 /***************************************************************************************/
 /*sign-up form*/
 .form-container {
+    background: rgba(51 , 51, 51, .8);
+    color: #fff;
     display: block;
     margin: auto;
     margin-top: 20px;
@@ -562,8 +563,17 @@ table .btn-group-action button{
     list-style: none;
     margin-bottom: 30px;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
+}
+
+.parcel-number span{
+    font-size: 30px;
+    margin: 5px;
+    padding: 5px;
+    color: #000;
+    background:#fff;
+    border-radius: 40px;
 }
 
 .parcel-number .numbers{
@@ -571,7 +581,6 @@ table .btn-group-action button{
     display: inline-block;
     text-decoration: none;
     padding: 10px;
-    border-radius: 20px;
 }
 
 .parcel-number .numbers:hover{

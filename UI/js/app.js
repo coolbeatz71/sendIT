@@ -1,27 +1,29 @@
-let modal      = document.querySelector("#modal-sign-up");
-let btnStart   = document.querySelector(".btn-start");
-let btnClose   = document.querySelector(".btn-close-modal");
-let gotoSignUp = document.querySelector("#goto-sign-up");
-let gotoSignIn = document.querySelector("#goto-sign-in");
-let signUpForm = document.querySelector("#sign-up-form");
-let signInForm = document.querySelector("#sign-in-form");
-let signInLink = document.querySelector("#sign-in-link");
-let btnCreateParcel = document.querySelectorAll(".btn-create");
+let modal                = document.querySelector("#modal-sign-up");
+let btnStart             = document.querySelector(".btn-start");
+let btnClose             = document.querySelector(".btn-close-modal");
+let gotoSignUp           = document.querySelector("#goto-sign-up");
+let gotoSignIn           = document.querySelector("#goto-sign-in");
+let signUpForm           = document.querySelector("#sign-up-form");
+let signInForm           = document.querySelector("#sign-in-form");
+let signInLink           = document.querySelector("#sign-in-link");
+let btnCreateParcel      = document.querySelectorAll(".btn-create");
 
-console.log(btnCreateParcel[0]);
+let btnDetail            = document.querySelectorAll("#btn-details");
+let btnEdit              = document.querySelectorAll("#btn-edit");
+let btnCancel            = document.querySelectorAll("#btn-cancel");
 
 let linkAllParcels       = document.getElementById('link-all-parcels');
 let linkTransitParcels   = document.getElementById('link-transit-parcels');
 let linkDeliveredParcels = document.getElementById('link-delivered-parcels');
 let linkCancelledParcels = document.getElementById('link-cancelled-parcels');
 
-let allParcels       = document.getElementById('all-parcels');
-let transitParcels   = document.getElementById('transit-parcels');
-let deliveredParcels = document.getElementById('delivered-parcels');
-let cancelledParcels = document.getElementById('cancelled-parcels');
+let allParcels           = document.getElementById('all-parcels');
+let transitParcels       = document.getElementById('transit-parcels');
+let deliveredParcels     = document.getElementById('delivered-parcels');
+let cancelledParcels     = document.getElementById('cancelled-parcels');
 
-let signInAdmin     = document.querySelector("#sign-in-admin");
-let signInFormAdmin = document.querySelector("#sign-in-form-admin");
+let signInAdmin          = document.querySelector("#sign-in-admin");
+let signInFormAdmin      = document.querySelector("#sign-in-form-admin");
 
 /*
     check if an element is in the DOM
@@ -99,6 +101,34 @@ let setCancelledParcel = () => {
     setDisplay(deliveredParcels, 'none');
     setDisplay(cancelledParcels, 'block');
 }
+
+isElementExist(btnDetail, () => {
+    btnDetail.forEach((el) => {
+        el.addEventListener('click', () => {
+            console.log(window.location.href);
+            //may look for a way of sending params in urls
+            window.location.href ="parcelDetail.html";
+        });
+    });
+});
+
+isElementExist(btnEdit, () => {
+    btnEdit.forEach((el) => {
+        el.addEventListener('click', () => {
+            console.log(window.location.href);
+            //may look for a way of sending params in urls
+            window.location.href ="editParcel.html";
+        });
+    });
+});
+
+isElementExist(btnCancel, () => {
+    btnCancel.forEach((el) => {
+        el.addEventListener('click', () => {
+            alert("It may cancel the delivery order");
+        });
+    });
+});
 
 isElementExist(btnCreateParcel, () => {
     btnCreateParcel.forEach((el) => {
