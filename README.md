@@ -8,7 +8,7 @@ SendIT is a courier service that helps users deliver parcels to different destin
   5. Users can see the details of a delivery order.
   6. Admin can change the status and present location of a parcel delivery order.
   
-This repo contains only the UI that is previewed through [github.io](https://coolbeatz71.github.io/sendIT/UI/)
+This repo contains only the UI that is previewed through [github pages](https://coolbeatz71.github.io/sendIT/UI/)
 
 ## How it work?
 
