@@ -73,7 +73,7 @@ ul{
 /***************************************************************************************/
 /*sign-up form*/
 .form-container {
-    background: rgba(51 , 51, 51, .8);
+    background: rgba(51 , 51, 51, .9);
     color: #fff;
     display: block;
     margin: auto;
@@ -434,7 +434,7 @@ table .btn-group-action button{
     border: 2px solid rgba(255, 145, 0, .4);
 }
 
-.btn-group-action #btn-edit{
+.btn-group-action #btn-edit, .btn-group-action #btn-edit-admin{
     background: #00e676;
     border: 2px solid rgba(0, 200, 83, .4);
 }
@@ -448,7 +448,7 @@ table .btn-group-action button{
     background: #ff6d00;
 }
 
-.btn-group-action #btn-edit:hover{
+.btn-group-action #btn-edit:hover, #btn-edit-admin:hover{
     background: #00c853;
 }
 
@@ -561,6 +561,7 @@ table .btn-group-action button{
 .parcel-number{
     text-align: center;
     list-style: none;
+    margin-top: 30px;
     margin-bottom: 30px;
     color: #fff;
     font-size: 18px;
@@ -580,13 +581,11 @@ table .btn-group-action button{
     width: 20%;
     display: inline-block;
     text-decoration: none;
-    padding: 10px;
+    padding: 18px;
 }
 
 .parcel-number .numbers:hover{
     cursor: pointer;
-    border-left:solid 1px #ccc;
-    border-right:solid 1px #ccc; 
 }
 
 .parcel-number #all{
@@ -609,6 +608,12 @@ select{
     padding: 18px;
     width: 97%;
     margin-bottom: 20px;
+}
+
+select option{
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .parcel-detail{
