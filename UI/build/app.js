@@ -10,7 +10,9 @@ var signInForm = document.querySelector("#sign-in-form");
 var signInLink = document.querySelector("#sign-in-link");
 var btnCreateParcel = document.querySelectorAll(".btn-create");
 
-console.log(btnCreateParcel[0]);
+var btnDetail = document.querySelectorAll("#btn-details");
+var btnEdit = document.querySelectorAll("#btn-edit");
+var btnCancel = document.querySelectorAll("#btn-cancel");
 
 var linkAllParcels = document.getElementById('link-all-parcels');
 var linkTransitParcels = document.getElementById('link-transit-parcels');
@@ -101,6 +103,34 @@ var setCancelledParcel = function setCancelledParcel() {
     setDisplay(deliveredParcels, 'none');
     setDisplay(cancelledParcels, 'block');
 };
+
+isElementExist(btnDetail, function () {
+    btnDetail.forEach(function (el) {
+        el.addEventListener('click', function () {
+            console.log(window.location.href);
+            //may look for a way of sending params in urls
+            window.location.href = "parcelDetail.html";
+        });
+    });
+});
+
+isElementExist(btnEdit, function () {
+    btnEdit.forEach(function (el) {
+        el.addEventListener('click', function () {
+            console.log(window.location.href);
+            //may look for a way of sending params in urls
+            window.location.href = "editParcel.html";
+        });
+    });
+});
+
+isElementExist(btnCancel, function () {
+    btnCancel.forEach(function (el) {
+        el.addEventListener('click', function () {
+            alert("It may cancel the delivery order");
+        });
+    });
+});
 
 isElementExist(btnCreateParcel, function () {
     btnCreateParcel.forEach(function (el) {
