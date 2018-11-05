@@ -594,3 +594,40 @@ table .btn-group-action button{
 .parcel-number #cancelled{
     background: #ff046e;
 }
+
+select{
+    padding: 18px;
+    width: 97%;
+    margin-bottom: 20px;
+}
+
+.parcel-detail{
+    margin-top: 120px;
+}
+
+.parcel-detail #info{
+    float: left;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.parcel-detail #map{
+    margin-top: -112px;
+    height: 427px;
+    float: right;
+    width: 46%;
+}
+
+#info td, th {
+    border: groove 1px #fff;
+    text-align: left;
+    padding: 16px;
+}
+
+#info tr:nth-child(even) {
+    background-color: #eee;
+}
+
+#info tr:nth-child(odd) {
+    background-color: #fff;
+}
