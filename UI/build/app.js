@@ -61,6 +61,7 @@ var openModal = function openModal() {
 var _gotoSignUp = function _gotoSignUp() {
     setDisplay(signUpForm, 'block');
     setDisplay(signInForm, 'none');
+    setDisplay(signInFormAdmin, 'none');
 };
 
 /**
@@ -69,6 +70,7 @@ var _gotoSignUp = function _gotoSignUp() {
 var _gotoSignIn = function _gotoSignIn() {
     setDisplay(signInForm, 'block');
     setDisplay(signUpForm, 'none');
+    setDisplay(signInFormAdmin, 'none');
 };
 
 var _gotoSignInAdmin = function _gotoSignInAdmin() {
