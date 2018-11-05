@@ -59,6 +59,7 @@ let openModal = () => {
 let _gotoSignUp = () => {
     setDisplay(signUpForm, 'block');
     setDisplay(signInForm, 'none');
+    setDisplay(signInFormAdmin, 'none');
 }
 
 /**
@@ -67,6 +68,7 @@ let _gotoSignUp = () => {
 let _gotoSignIn = () => {
     setDisplay(signInForm, 'block');
     setDisplay(signUpForm, 'none');
+    setDisplay(signInFormAdmin, 'none');
 }
 
 let _gotoSignInAdmin = () => {
